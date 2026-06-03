@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/Rajasri-01R/Github-Handson'
+                 git branch: 'main', url: 'https://github.com/Rajasri-01R/Github-Handson.git'
             }
         }
 
