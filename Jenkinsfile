@@ -1,17 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18'
+        }
+    }
 
     environment {
         IMAGE_NAME = "jenkins-demo"
     }
 
     stages {
-
-        stage('Checkout Code') {
-            steps {
-                 git branch: 'main', url: 'https://github.com/Rajasri-01R/Github-Handson.git'
-            }
-        }
 
         stage('Build App') {
             steps {
